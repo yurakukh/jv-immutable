@@ -3,15 +3,14 @@ package core.basesyntax;
 import java.util.Objects;
 
 public class Engine {
-    private final int horsePower;
-    private final String manufacturer;
+    private int horsePower;
+    private String manufacturer;
 
     public Engine(int horsePower, String manufacturer) {
         this.horsePower = horsePower;
         this.manufacturer = manufacturer;
     }
 
-    // Copy constructor
     public Engine(Engine other) {
         this(other.horsePower, other.manufacturer);
     }
@@ -20,8 +19,16 @@ public class Engine {
         return horsePower;
     }
 
+    public void setHorsePower(int hp) {
+        this.horsePower = hp;
+    }
+
     public String getManufacturer() {
         return manufacturer;
+    }
+
+     public void setManufacturer(String manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
     @Override

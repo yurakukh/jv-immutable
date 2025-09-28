@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Objects;
 
 public class Wheel {
-    private final int radius;
+    private int radius;
 
     public Wheel(int radius) {
         this.radius = radius;
@@ -15,6 +15,10 @@ public class Wheel {
 
     public int getRadius() {
         return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
     }
 
     @Override
