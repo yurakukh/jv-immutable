@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Objects;
 
-public class Engine {
+public class Engine implements Cloneable{
     private int horsePower;
     private String manufacturer;
 
@@ -55,5 +55,14 @@ public class Engine {
     @Override
     public int hashCode() {
         return Objects.hash(horsePower, manufacturer);
+    }
+
+    @Override
+    public Engine clone() {
+        try {
+            return (Engine) super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new AssertionError();
+        }
     }
 }
